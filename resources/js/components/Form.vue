@@ -14,7 +14,7 @@
 				:placeholder="phonePlaceholder"
 				autocomplete="off"
 			></vue-tel-input>
-			<span v-if="phoneIsValid" class="flex items-center absolute svg-valid">
+			<span v-if="phoneIsValid" class="absolute flex items-center svg-valid">
 				<svg
 					fill="currentColor"
 					xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@
 			/>
 			<span
 				v-if="!$v.email.$invalid"
-				class="flex items-center absolute svg-valid"
+				class="absolute flex items-center svg-valid"
 			>
 				<svg
 					fill="currentColor"
@@ -57,7 +57,7 @@
 
 		<label class="relative block label-submit">
 			<button
-				class="button-pulse block"
+				class="block button-pulse"
 				:class="{ disabled: !formValid }"
 				:disabled="!formValid"
 			>
@@ -73,7 +73,7 @@
 					>Request a callback</span
 				>
 			</button>
-			<span v-if="formValid" class="flex items-center absolute svg-submit">
+			<span v-if="formValid" class="absolute flex items-center svg-submit">
 				<svg
 					fill="currentColor"
 					xmlns="http://www.w3.org/2000/svg"
@@ -163,9 +163,9 @@
 			emailPlaceholder() {
 				switch (this.locale) {
 					case "ru":
-						return "Электронная Почта *";
+						return "Электронная почта *";
 					case "en":
-						return "Your E-mail *";
+						return "Your e-mail *";
 				}
 			},
 			phonePlaceholder() {

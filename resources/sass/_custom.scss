@@ -133,6 +133,35 @@
                     
                     @apply mt-2;
                 }
+
+                span {
+                    display: inline-block;
+                    i {
+                        display: inline-block;
+                        font-style: normal;
+                        animation: float .55s ease-in-out infinite;
+                    }
+    
+                    i:nth-child(1) {
+                        animation-delay:.5s;
+                    }
+                    i:nth-child(2) {
+                        animation-delay:.15s;
+                    }
+                    i:nth-child(3) {
+                        animation-delay:.25s;
+                    }
+                    i:nth-child(4) {
+                        animation-delay:.35s;
+                    }
+                    i:nth-child(5) {
+                        animation-delay:.45s;
+                    }
+                    i:nth-child(6) {
+                        animation-delay:.55s;
+                    }
+                }
+
             }
 
             h5 {

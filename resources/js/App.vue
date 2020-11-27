@@ -120,18 +120,20 @@
 			<section class="flex flex-col flex-grow home-view-content">
 				<div class="flex-grow md:flex md:flex-col md:justify-center">
 					<!-- H1 -->
-					<h1 v-if="isRu">
-						Открытие компании в&nbsp;Сингапуре<br />за&nbsp;5&nbsp;дней!
-					</h1>
+					<h1 v-if="isRu">Открытие компании в&nbsp;Сингапуре!</h1>
 					<h1 v-else-if="isEn">Company setup in&nbsp;Singapore!</h1>
 
 					<!-- H3 -->
 					<h3 v-if="isRu">
 						Полный пакет документов с&nbsp;возможностью дистанционного открытия
-						счета
+						счета за&nbsp;<span
+							><i>5</i>&nbsp;<i>д</i><i>н</i><i>е</i><i>й</i><i>!</i></span
+						>
 					</h3>
 					<h3 v-else-if="isEn">
-						Full set of documents with remote bank account opening in 5 days!
+						Full set of documents with remote bank account opening in&nbsp;<span
+							><i>5</i>&nbsp;<i>d</i><i>a</i><i>y</i><i>s</i><i>!</i></span
+						>
 					</h3>
 
 					<!-- H5 -->
@@ -147,10 +149,6 @@
 
 					<!-- FORM -->
 					<Form type="form" />
-
-					<!-- A -->
-					<a v-if="isRu" :href="redirectTo">Перейти на сайт</a>
-					<a v-if="isEn" :href="redirectTo">Go to the Website</a>
 				</div>
 
 				<!-- P -->
