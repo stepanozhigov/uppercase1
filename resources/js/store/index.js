@@ -7,7 +7,7 @@ export default new Vuex.Store({
     state: {
         modal: false,
         success: false,
-        locale: "",
+        locale: false,
         ipLocation: null,
         geoLocation: null,
         redirectTo: "http://uppercase.group/"

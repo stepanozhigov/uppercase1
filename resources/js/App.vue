@@ -121,13 +121,14 @@
 			<section class="flex flex-col flex-grow home-view-content">
 				<div class="flex-grow md:flex md:flex-col md:justify-center">
 					<!-- H1 -->
-					<h1 v-if="isRu">Открытие банковских счетов</h1>
+					<h1 v-if="isRu">
+						Открытие компании в Сингапуре за&nbsp;5&nbsp;дней!
+					</h1>
 					<h1 v-else-if="isEn">Secure Bank Accounts</h1>
 
 					<!-- H3 -->
 					<h3 v-if="isRu">
-						за 10 дней для&nbsp;офшорных компаний в&nbsp;Казахстане
-						и&nbsp;Кыргызстане
+						Полный пакет документов с возможностью дистанционного открытия счета
 					</h3>
 					<h3 v-else-if="isEn">
 						for offshore companies in&nbsp;Kazakhstan and Kyrgyzstan
@@ -250,7 +251,8 @@
 		},
 		// CREATED
 		created() {
-			this.getDomainLocale();
+			this.setLocale(this.locale);
+			// this.getDomainLocale();
 			this.getAddress();
 		},
 		mounted: function () {
@@ -302,15 +304,6 @@
 				document.documentElement.style.setProperty("--vh", `${vh}px`);
 				//console.log(vh);
 			},
-			getDomainLocale() {
-				if (location.hostname.includes("lmr")) {
-					this.setLocale("ru");
-				} else if (location.hostname.includes("lme")) {
-					this.setLocale("en");
-				} else {
-					this.setLocale("en");
-				}
-			},
 			toggleModal() {
 				if (this.isModal) {
 					this.unsetModal();
@@ -361,11 +354,6 @@
 			},
 			locale: {
 				type: String,
-			},
-		},
-		watch: {
-			locale: function (val) {
-				this.setLocale(val);
 			},
 		},
 	};

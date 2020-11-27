@@ -2909,6 +2909,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -2929,7 +2930,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   // CREATED
   created: function created() {
-    this.getDomainLocale();
+    this.setLocale(this.locale); // this.getDomainLocale();
+
     this.getAddress();
   },
   mounted: function mounted() {
@@ -2967,15 +2969,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     setViewHeight: function setViewHeight() {
       var vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty("--vh", "".concat(vh, "px")); //console.log(vh);
-    },
-    getDomainLocale: function getDomainLocale() {
-      if (location.hostname.includes("lmr")) {
-        this.setLocale("ru");
-      } else if (location.hostname.includes("lme")) {
-        this.setLocale("en");
-      } else {
-        this.setLocale("en");
-      }
     },
     toggleModal: function toggleModal() {
       if (this.isModal) {
@@ -3019,8 +3012,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var _this3 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
-        var _location, address_data;
-
+        var location, address_data;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
@@ -3032,9 +3024,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 return _this3.getCoords();
 
               case 5:
-                _location = _context2.sent;
-                _this3.latitude = _location.coords.latitude;
-                _this3.longitude = _location.coords.longitude;
+                location = _context2.sent;
+                _this3.latitude = location.coords.latitude;
+                _this3.longitude = location.coords.longitude;
                 _context2.next = 10;
                 return axios__WEBPACK_IMPORTED_MODULE_1___default()(_this3.addressUrl);
 
@@ -3066,11 +3058,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     locale: {
       type: String
-    }
-  },
-  watch: {
-    locale: function locale(val) {
-      this.setLocale(val);
     }
   }
 });
@@ -9592,7 +9579,11 @@ var render = function() {
                   },
                   [
                     _vm.isRu
-                      ? _c("h1", [_vm._v("Открытие банковских счетов")])
+                      ? _c("h1", [
+                          _vm._v(
+                            "\n\t\t\t\t\tОткрытие компании в Сингапуре за 5 дней!\n\t\t\t\t"
+                          )
+                        ])
                       : _vm.isEn
                       ? _c("h1", [_vm._v("Secure Bank Accounts")])
                       : _vm._e(),
@@ -9600,7 +9591,7 @@ var render = function() {
                     _vm.isRu
                       ? _c("h3", [
                           _vm._v(
-                            "\n\t\t\t\t\tза 10 дней для офшорных компаний в Казахстане\n\t\t\t\t\tи Кыргызстане\n\t\t\t\t"
+                            "\n\t\t\t\t\tПолный пакет документов с возможностью дистанционного открытия счета\n\t\t\t\t"
                           )
                         ])
                       : _vm.isEn
@@ -26687,7 +26678,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
   state: {
     modal: false,
     success: false,
-    locale: "",
+    locale: false,
     ipLocation: null,
     geoLocation: null,
     redirectTo: "http://uppercase.group/"
