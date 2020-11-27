@@ -124,15 +124,16 @@
 					<h1 v-if="isRu">
 						Открытие компании в Сингапуре за&nbsp;5&nbsp;дней!
 					</h1>
-					<h1 v-else-if="isEn">Secure Bank Accounts</h1>
+					<h1 v-else-if="isEn">
+						Company incorporation in Singapore in 5 days!
+					</h1>
 
 					<!-- H3 -->
 					<h3 v-if="isRu">
 						Полный пакет документов с возможностью дистанционного открытия счета
 					</h3>
 					<h3 v-else-if="isEn">
-						for offshore companies in&nbsp;Kazakhstan and Kyrgyzstan
-						in&nbsp;10&nbsp;days!
+						Full set of documents with remote bank account opening
 					</h3>
 
 					<!-- H5 -->

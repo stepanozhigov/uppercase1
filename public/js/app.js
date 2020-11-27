@@ -2910,6 +2910,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -9585,7 +9586,11 @@ var render = function() {
                           )
                         ])
                       : _vm.isEn
-                      ? _c("h1", [_vm._v("Secure Bank Accounts")])
+                      ? _c("h1", [
+                          _vm._v(
+                            "\n\t\t\t\t\tCompany incorporation in Singapore in 5 days!\n\t\t\t\t"
+                          )
+                        ])
                       : _vm._e(),
                     _vm._v(" "),
                     _vm.isRu
@@ -9597,7 +9602,7 @@ var render = function() {
                       : _vm.isEn
                       ? _c("h3", [
                           _vm._v(
-                            "\n\t\t\t\t\tfor offshore companies in Kazakhstan and Kyrgyzstan\n\t\t\t\t\tin 10 days!\n\t\t\t\t"
+                            "\n\t\t\t\t\tFull set of documents with remote bank account opening\n\t\t\t\t"
                           )
                         ])
                       : _vm._e(),

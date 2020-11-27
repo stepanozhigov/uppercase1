@@ -23,6 +23,22 @@ module.exports = {
         inset: {
             1: "1rem"
         },
+        screens: {
+            'sm': '375px',
+            // => @media (min-width: 640px) { ... }
+      
+            'md': '415px',
+            // => @media (min-width: 768px) { ... }
+      
+            'lg': '768px',
+            // => @media (min-width: 1024px) { ... }
+      
+            'xl': '1366px',
+            // => @media (min-width: 1280px) { ... }
+      
+            '2xl': '1920px',
+            // => @media (min-width: 1536px) { ... }
+        },
         extend: {
             colors: {
                 cwhite: "#f8f7f6",
