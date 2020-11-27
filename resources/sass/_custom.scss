@@ -103,7 +103,7 @@
 
             h3 {
                 @apply font-suisseIntl;
-                @apply font-bold;
+                font-weight:300;
                 color: theme("colors.cwhite");
                 // font-size: 1.125rem;
                 font-size: rem(16);
@@ -135,6 +135,7 @@
                 }
 
                 span {
+                    font-weight:700;
                     display: inline-block;
                     i {
                         display: inline-block;
