@@ -97,8 +97,8 @@
 			<!-- {{-- Phone call --}} -->
 			<div class="flex flex-col app-call md:flex-row">
 				<!-- {{-- Make call --}} -->
-				<a href="tel:8 910 235-89-36" class="app-call-number">
-					+7 967 069-04-29
+				<a href="tel:971521841181" class="app-call-number">
+					+971 52 184 1181
 				</a>
 
 				<!-- {{-- Book call --}} -->

@@ -9530,9 +9530,9 @@ var render = function() {
               "a",
               {
                 staticClass: "app-call-number",
-                attrs: { href: "tel:8 910 235-89-36" }
+                attrs: { href: "tel:971521841181" }
               },
-              [_vm._v("\n\t\t\t\t+7 967 069-04-29\n\t\t\t")]
+              [_vm._v("\n\t\t\t\t+971 52 184 1181\n\t\t\t")]
             ),
             _vm._v(" "),
             _vm.isRu
