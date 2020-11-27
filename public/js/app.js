@@ -2908,9 +2908,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
 
 
 
@@ -9383,7 +9380,6 @@ var render = function() {
                 staticClass: "h-full",
                 attrs: {
                   xmlns: "http://www.w3.org/2000/svg",
-                  width: "208",
                   viewBox: "0 0 208 48"
                 }
               },
@@ -9581,28 +9577,24 @@ var render = function() {
                   [
                     _vm.isRu
                       ? _c("h1", [
-                          _vm._v(
-                            "\n\t\t\t\t\tОткрытие компании в Сингапуре за 5 дней!\n\t\t\t\t"
-                          )
+                          _vm._v("\n\t\t\t\t\tОткрытие компании в Сингапуре"),
+                          _c("br"),
+                          _vm._v("за 5 дней!\n\t\t\t\t")
                         ])
                       : _vm.isEn
-                      ? _c("h1", [
-                          _vm._v(
-                            "\n\t\t\t\t\tCompany incorporation in Singapore in 5 days!\n\t\t\t\t"
-                          )
-                        ])
+                      ? _c("h1", [_vm._v("Company setup in Singapore!")])
                       : _vm._e(),
                     _vm._v(" "),
                     _vm.isRu
                       ? _c("h3", [
                           _vm._v(
-                            "\n\t\t\t\t\tПолный пакет документов с возможностью дистанционного открытия счета\n\t\t\t\t"
+                            "\n\t\t\t\t\tПолный пакет документов с возможностью дистанционного открытия\n\t\t\t\t\tсчета\n\t\t\t\t"
                           )
                         ])
                       : _vm.isEn
                       ? _c("h3", [
                           _vm._v(
-                            "\n\t\t\t\t\tFull set of documents with remote bank account opening\n\t\t\t\t"
+                            "\n\t\t\t\t\tFull set of documents with remote bank account opening in 5 days!\n\t\t\t\t"
                           )
                         ])
                       : _vm._e(),
@@ -9610,11 +9602,7 @@ var render = function() {
                     _vm.isRu
                       ? _c("h5", [
                           _vm._v(
-                            "\n\t\t\t\t\tОставьте номер телефона и получите подробную консультацию в\n\t\t\t\t\tтечение"
-                          ),
-                          _c("br"),
-                          _vm._v(
-                            "\n\t\t\t\t\t5 минут по телефону или WhatsApp\n\t\t\t\t"
+                            "\n\t\t\t\t\tОставьте номер телефона и получите подробную консультацию\n\t\t\t\t\tв течение 5 минут по телефону или WhatsApp\n\t\t\t\t"
                           )
                         ])
                       : _vm._e(),

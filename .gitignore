@@ -6,6 +6,7 @@
 .env
 .env.production
 .env.backup
+/resources/uppercase1
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml

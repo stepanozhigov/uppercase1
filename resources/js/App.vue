@@ -6,7 +6,6 @@
 			<div class="app-header-logo">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					width="208"
 					class="h-full"
 					viewBox="0 0 208 48"
 				>
@@ -122,25 +121,23 @@
 				<div class="flex-grow md:flex md:flex-col md:justify-center">
 					<!-- H1 -->
 					<h1 v-if="isRu">
-						Открытие компании в Сингапуре за&nbsp;5&nbsp;дней!
+						Открытие компании в&nbsp;Сингапуре<br />за&nbsp;5&nbsp;дней!
 					</h1>
-					<h1 v-else-if="isEn">
-						Company incorporation in Singapore in 5 days!
-					</h1>
+					<h1 v-else-if="isEn">Company setup in&nbsp;Singapore!</h1>
 
 					<!-- H3 -->
 					<h3 v-if="isRu">
-						Полный пакет документов с возможностью дистанционного открытия счета
+						Полный пакет документов с&nbsp;возможностью дистанционного открытия
+						счета
 					</h3>
 					<h3 v-else-if="isEn">
-						Full set of documents with remote bank account opening
+						Full set of documents with remote bank account opening in 5 days!
 					</h3>
 
 					<!-- H5 -->
 					<h5 v-if="isRu">
-						Оставьте номер телефона и&nbsp;получите подробную консультацию в
-						течение<br />
-						5&nbsp;минут по&nbsp;телефону или&nbsp;WhatsApp
+						Оставьте номер телефона и&nbsp;получите подробную консультацию
+						в&nbsp;течение&nbsp;5&nbsp;минут по&nbsp;телефону или&nbsp;WhatsApp
 					</h5>
 					<h5 v-if="isEn">
 						Leave your contacts and get consultation from our experts

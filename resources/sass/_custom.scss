@@ -1,3 +1,8 @@
+@function rem($num) {
+    $strip-unit: $num / ($num * 0 + 1);
+    @return $strip-unit / 16 * 1rem;
+}
+
 @layer base {
     .app-template {
         @apply h-screen;
@@ -11,7 +16,12 @@
         box-shadow: inset 0 -1px 0 theme("colors.shadow");
 
         .app-header-logo {
-            height: 3rem;
+            height: 2.5rem;
+            margin: 1rem 0;
+
+            @screen sm {
+                height: 3rem;
+            }
         }
 
         .app-call {
@@ -64,31 +74,95 @@
                 @apply font-suisseIntl;
                 @apply font-bold;
                 color: theme("colors.cwhite");
-                font-size: 2rem;
+                font-size: rem(24);
                 letter-spacing: -0.3px;
-                line-height: 2.5rem;
+                line-height: rem(32);
 
                 @apply mt-8;
+
+                @screen sm {
+                    font-size: 2rem;
+                    line-height: 2.5rem;
+                }
+                @screen lg {
+                    max-width: rem(640);
+                    @apply font-bold;
+                    font-size: rem(54);
+                    line-height:  rem(64);
+                    letter-spacing: 0;
+                    @apply mt-0;
+                }
+                @screen xl {
+                    // @apply font-bold;
+                    // font-size: rem(40);
+                    // letter-spacing: -0.05rem;
+                    // line-height: 3.5rem;
+
+                }
             }
 
             h3 {
                 @apply font-suisseIntl;
                 @apply font-bold;
                 color: theme("colors.cwhite");
-                font-size: 1.125rem;
-                line-height: 1.375rem;
-
+                // font-size: 1.125rem;
+                font-size: rem(16);
+                line-height: rem(22);
                 @apply mt-4;
+
+                @screen sm {
+                    font-size: rem(18);
+                    line-height: 1.375rem;
+                }
+
+                @screen lg {
+                    max-width: rem(640);
+                    font-size: 2rem;
+                    letter-spacing: 0;
+                    line-height: 2.5rem;
+                    margin-top: 1.625rem;
+                }
+
+                @screen xl {
+                    @apply font-suisseIntl;
+                    @apply font-bold;
+                    color: theme("colors.cwhite");
+                    font-size: 1.5rem;
+                    line-height: 1.875rem;
+                    letter-spacing: 0;
+                    
+                    @apply mt-2;
+                }
             }
 
             h5 {
                 @apply font-suisseIntl;
                 @apply font-light;
                 color: theme("colors.cwhite");
-                font-size: 0.875rem;
-                line-height: 1.25rem;
+                font-size: rem(14);
+                line-height: rem(20);
 
                 @apply mt-4;
+
+                @screen sm {
+                    font-size: rem(14);
+                    line-height: rem(20);
+                }
+                @screen lg {
+                    line-height: 1.5rem;
+                    margin-top: 1.625rem;
+                    letter-spacing: 0;
+                    max-width: rem(476);
+                }
+
+                @screen xl {
+                    @apply font-suisseIntl;
+                    @apply font-light;
+                    color: theme("colors.cwhite");
+                    font-size: 0.875rem;
+                    line-height: 1.25rem;
+                    margin-top: 1.5625rem;
+                }
             }
 
             a {
@@ -109,6 +183,7 @@
                 font-size: 0.5rem;
                 letter-spacing: -0.3px;
                 line-height: 0.625rem;
+                margin-top: 1rem;
 
                 @apply mb-4;
 
@@ -158,7 +233,12 @@
                         @apply font-suisseIntl;
                         @apply font-normal;
                         color: theme("colors.cdark");
-                        font-size: 1.125rem;
+                        font-size: rem(16);
+                        margin-right: 0;
+
+                        @screen sm {
+                            font-size: rem(18);
+                        }
                     }
                     .vti__dropdown-arrow {
                         color: theme("colors.cdark");
@@ -246,9 +326,13 @@
                 @apply font-suisseIntl;
                 @apply font-normal;
                 color: theme("colors.cbright");
-                font-size: 1.125rem;
+                font-size: rem(16);
                 letter-spacing: -0.4px;
                 line-height: 1.5rem;
+
+                @screen sm {
+                    font-size: rem(18);
+                }
             }
         }
     }
@@ -302,10 +386,8 @@
     }
 
     // SCREEN SIZES
-    @screen sm {
-    }
 
-    @screen md {
+    @screen lg {
         .app-template {
             @apply px-8 pb-8;
         }
@@ -339,33 +421,6 @@
             @apply px-10;
 
             .home-view-content {
-                h1 {
-                    @apply font-bold;
-                    font-size: 4rem;
-                    // letter-spacing: -0.0625rem;
-                    letter-spacing: 0;
-                    line-height: 4.5rem;
-
-                    @apply mt-0;
-                }
-
-                h3 {
-                    font-size: 2rem;
-                    letter-spacing: 0;
-                    line-height: 2.5rem;
-                    margin-top: 1.625rem;
-                }
-
-                h5 {
-                    font-size: 1rem;
-                    line-height: 1.5rem;
-                    margin-top: 1.625rem;
-                    letter-spacing: 0;
-                    // width: 27rem;
-                }
-
-                a {
-                }
 
                 .form-template {
                     max-width: 24rem;
@@ -414,12 +469,12 @@
             }
             p {
                 text-align: left;
-                margin-top: auto;
+                margin-top: 1rem;
             }
         }
     }
 
-    @screen lg {
+    @screen xl {
         .app-template {
             padding: 0 8.125rem 6rem;
         }
@@ -441,31 +496,8 @@
                 @apply mx-auto;
                 max-width: 46rem;
 
-                h1 {
-                    @apply font-bold;
-                    font-size: 3rem;
-                    letter-spacing: -0.05rem;
-                    line-height: 3.5rem;
-                }
-
-                h3 {
-                    @apply font-suisseIntl;
-                    @apply font-bold;
-                    color: theme("colors.cwhite");
-                    font-size: 1.5rem;
-                    line-height: 1.875rem;
-                    letter-spacing: 0;
-                    max-width: 40rem;
-                    @apply mt-2;
-                }
-
                 h5 {
-                    @apply font-suisseIntl;
-                    @apply font-light;
-                    color: theme("colors.cwhite");
-                    font-size: 0.875rem;
-                    line-height: 1.25rem;
-                    margin-top: 1.5625rem;
+                    
                 }
 
                 a {
