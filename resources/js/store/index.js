@@ -10,6 +10,8 @@ export default new Vuex.Store({
         locale: false,
         ipLocation: null,
         geoLocation: null,
+        url:null,
+        hook:null,
         redirectTo: "http://uppercase.group/"
     },
     getters: {
@@ -18,7 +20,9 @@ export default new Vuex.Store({
         ipLocation: state => state.ipLocation,
         geoLocation: state => state.geoLocation,
         locale: state => state.locale,
-        redirectTo: state => state.redirectTo
+        redirectTo: state => state.redirectTo,
+        url: state => state.url,
+        hook: state => state.hook
     },
     mutations: {
         SET_MODAL: state => (state.modal = true),
@@ -28,7 +32,9 @@ export default new Vuex.Store({
         SET_IP_LOCATION: (state, ipLocation) => (state.ipLocation = ipLocation),
         SET_GEO_LOCATION: (state, geoLocation) =>
             (state.geoLocation = geoLocation),
-        SET_LOCALE: (state, locale) => (state.locale = locale)
+        SET_LOCALE: (state, locale) => (state.locale = locale),
+        SET_URL: (state, url) => (state.url = url),
+        SET_HOOK: (state, hook) => (state.hook = hook)
     },
     actions: {
         setModal: context => context.commit("SET_MODAL"),

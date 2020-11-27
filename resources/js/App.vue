@@ -174,19 +174,6 @@
 
 			<h4 v-if="isRu">Ваша заявка принята</h4>
 			<h4 v-else-if="isEn">Your request has been sent</h4>
-
-			<a
-				v-if="isRu"
-				:href="redirectTo"
-				class="flex items-center justify-center button-pulse"
-				>Перейти на сайт</a
-			>
-			<a
-				v-if="isEn"
-				:href="redirectTo"
-				class="flex items-center justify-center button-pulse"
-				>Go to the Website</a
-			>
 		</div>
 		<!-- /SUCCESS VIEW -->
 
@@ -247,7 +234,9 @@
 		},
 		// CREATED
 		created() {
-			this.setLocale(this.locale);
+			this.$store.commit("SET_URL", this.url),
+				this.$store.commit("SET_HOOK", this.hook),
+				this.setLocale(this.locale);
 			// this.getDomainLocale();
 			this.getAddress();
 		},
@@ -349,6 +338,12 @@
 				default: "",
 			},
 			locale: {
+				type: String,
+			},
+			url: {
+				type: String,
+			},
+			hook: {
 				type: String,
 			},
 		},
