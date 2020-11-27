@@ -70,6 +70,10 @@
         @apply px-4;
 
         .home-view-content {
+            @screen lg {
+                min-height:rem(768);
+            }
+
             h1 {
                 @apply font-suisseIntl;
                 @apply font-bold;
