@@ -16,7 +16,7 @@
 <body class="antialiased">
 
     <div id="app">
-        <App />
+    <App environment="{{env('APP_ENV')}}" locale="{{app()->getLocale()}}"/>
     </div>
 
     {{-- HERE Maps API --}}
