@@ -199,11 +199,25 @@
 							//console.log(response);
 							fbq("track", "Lead");
 							if (this.type == "form") {
-								ym(62231704, "reachGoal", "leadmagnit-form-open-account");
-								ga("send", "event", "leadmagnit-forms-accoint-in-KZ", "send");
+								ym(62231704, "reachGoal", " leadmagnit-form-business-singapore");
+								ga(
+									"send",
+									"event",
+									"leadmagnit-forms-business-in-Singapore",
+									"send"
+								);
 							} else if (this.type == "callback") {
-								ym(62231704, "reachGoal", "leadmagnit-callback-open-account");
-								ga("send", "event", "leadmagnit-callback-accoint-in-KZ", "send");
+								ym(
+									62231704,
+									"reachGoal",
+									"leadmagnit-callback-business-singapore"
+								);
+								ga(
+									"send",
+									"event",
+									"leadmagnit-callback-business-in-Singapore",
+									"send"
+								);
 							}
 							this.phone = "";
 							//window.location.replace(this.redirectTo);
