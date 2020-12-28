@@ -96,8 +96,8 @@
 			<!-- {{-- Phone call --}} -->
 			<div class="flex flex-col app-call md:flex-row">
 				<!-- {{-- Make call --}} -->
-				<a href="tel:971521841181" class="app-call-number">
-					+971 52 184 1181
+				<a href="tel:+79670690429" class="app-call-number">
+					+7 (967) 069-04-29
 				</a>
 
 				<!-- {{-- Book call --}} -->
@@ -120,20 +120,25 @@
 			<section class="flex flex-col flex-grow home-view-content">
 				<div class="flex-grow md:flex md:flex-col md:justify-center">
 					<!-- H1 -->
-					<h1 v-if="isRu">Открытие компании в&nbsp;Сингапуре!</h1>
-					<h1 v-else-if="isEn">Company setup in&nbsp;Singapore!</h1>
+					<h1 v-if="isRu">
+						Открытие компании в&nbsp;Сингапуре<br />за
+						<span><i>3</i> <i>ч</i><i>а</i><i>с</i><i>а</i><i>!</i></span>
+					</h1>
+					<h1 v-else-if="isEn">
+						Company setup in&nbsp;Singapore<br />in
+						<span
+							><i>3</i> <i>h</i><i>o</i><i>u</i><i>r</i><i>s</i><i>!</i></span
+						>
+					</h1>
 
 					<!-- H3 -->
 					<h3 v-if="isRu">
-						Полный пакет документов с&nbsp;возможностью дистанционного открытия
-						счета за&nbsp;<span
-							><i>5</i>&nbsp;<i>д</i><i>н</i><i>е</i><i>й</i><i>!</i></span
-						>
+						Полное оформление - $3500 + инструкция как удаленно открыть
+						банковский счет!
 					</h3>
 					<h3 v-else-if="isEn">
-						Full set of documents with remote bank account opening in&nbsp;<span
-							><i>5</i>&nbsp;<i>d</i><i>a</i><i>y</i><i>s</i><i>!</i></span
-						>
+						Full support - $ 3500 + instructions<br />on how to open a bank
+						account remotely!
 					</h3>
 
 					<!-- H5 -->
