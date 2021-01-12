@@ -103,9 +103,9 @@
 			phoneIsValid: false,
 			onFocus: false,
 			settings: {
-				placeholder: "Ваш телефон *",
+				//placeholder: "Ваш телефон *",
 				disabledFormatting: false,
-				enabledCountryCode: true,
+				enabledCountryCode: false,
 				mode: "international",
 				preferredCountries: ["fr", "us", "gb"],
 				validCharactersOnly: true,
