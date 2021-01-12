@@ -13,6 +13,7 @@ class LeadController extends Controller
             'url' => $request->url,
             'phone' => $request->phone,
             'email' => $request->email,
+            'lead_comment'=>$request->input('lead_comment',''),
             'contact_fields' => [
                 'geo_location' => $request->geoLocation,
                 'ip_location' => $request->ipLocation
@@ -20,7 +21,7 @@ class LeadController extends Controller
         ]);
         if ($response->successful()) {
             return response()->json($response->json());
-        } elseif ($response->failed() || $response->clientError() || $response->serverError()) {
+        } elseif ($response->failed()) {
             return response()->json($response->throw()->json());
         }
     }
