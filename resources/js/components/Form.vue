@@ -138,6 +138,14 @@
 			formValid: function () {
 				return !this.$v.email.$invalid && this.phoneIsValid;
 			},
+			leadComment() {
+				return (
+					"Геолокация: " +
+					(this.geoAddress ? this.geoAddress + "; " : "не определено; ") +
+					"IPлокация: " +
+					(this.ipLocation ? this.ipLocation : "не определено")
+				);
+			},
 			geoAddress() {
 				if (this.geoLocation) {
 					return (
@@ -192,12 +200,13 @@
 							phone: this.phone,
 							url: this.url,
 							email: this.email,
+							lead_comment: this.leadComment,
 							geoLocation: this.geoAddress,
 							ipLocation: this.ipAddress,
 						})
 						.then((response) => {
 							//console.log(response);
-							fbq("track", "Lead");
+							// fbq("track", "Lead");
 							if (this.type == "form") {
 								ym(62231704, "reachGoal", " leadmagnit-form-business-singapore");
 								ga(
@@ -220,9 +229,9 @@
 								);
 							}
 							this.phone = "";
-							//window.location.replace(this.redirectTo);
 							this.setSuccess();
 							this.setModal();
+							setTimeout(() => window.location.replace(this.redirectTo), 4000);
 						});
 				}
 			},
