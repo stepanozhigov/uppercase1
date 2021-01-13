@@ -209,24 +209,30 @@
 							// fbq("track", "Lead");
 							if (this.type == "form") {
 								ym(62231704, "reachGoal", " leadmagnit-form-business-singapore");
-								ga(
-									"send",
-									"event",
-									"leadmagnit-forms-business-in-Singapore",
-									"send"
-								);
+								gtag("event", "send", {
+									event_category: "leadmagnit-forms-business-in-Singapore",
+								});
+								// ga(
+								// 	"send",
+								// 	"event",
+								// 	"leadmagnit-forms-business-in-Singapore",
+								// 	"send"
+								// );
 							} else if (this.type == "callback") {
 								ym(
 									62231704,
 									"reachGoal",
 									"leadmagnit-callback-business-singapore"
 								);
-								ga(
-									"send",
-									"event",
-									"leadmagnit-callback-business-in-Singapore",
-									"send"
-								);
+								gtag("event", "send", {
+									event_category: "leadmagnit-callback-business-in-Singapore",
+								});
+								// ga(
+								// 	"send",
+								// 	"event",
+								// 	"leadmagnit-callback-business-in-Singapore",
+								// 	"send"
+								// );
 							}
 							this.phone = "";
 							this.setSuccess();
