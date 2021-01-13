@@ -163,9 +163,9 @@
 			url() {
 				switch (this.locale) {
 					case "ru":
-						return "lmr.vskidke.ru";
+						return "singapore.uppercase.group/ru";
 					case "en":
-						return "lme.vskidke.ru";
+						return "singapore.uppercase.group/en";
 				}
 			},
 			emailPlaceholder() {
