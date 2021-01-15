@@ -96,8 +96,8 @@
 			<!-- {{-- Phone call --}} -->
 			<div class="flex flex-col app-call md:flex-row">
 				<!-- {{-- Make call --}} -->
-				<a href="tel:+79670690429" class="app-call-number">
-					+7 (967) 069-04-29
+				<a href="tel:+971521841181" class="app-call-number">
+					+971 52 184 11 81
 				</a>
 
 				<!-- {{-- Book call --}} -->
